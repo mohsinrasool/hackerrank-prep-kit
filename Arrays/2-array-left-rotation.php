@@ -3,15 +3,17 @@
 // Complete the rotLeft function below.
 function rotLeft($a, $d) {
 
-    $n = count($a);
-    $d = $d % $n;
+    $size = count( $a );
+    $d = $d % $size;
     $c = 0;
 
     $result = array();
-    for($i=$d; $i<$n; $i++) {
+
+    for( $i = $d; $i < $size; $i++ ) {
         $result[$c++] = $a[$i];
     }
-    for($i=0; $i<$d; $i++) {
+
+    for( $i = 0; $i < $d; $i++) {
         $result[$c++] = $a[$i];
     }
 
