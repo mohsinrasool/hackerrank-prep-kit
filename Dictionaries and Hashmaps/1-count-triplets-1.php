@@ -6,13 +6,17 @@ function countTriplets($arr, $r) {
     $countTriplets = 0;
     $n = count( $arr );
 
-    for( $i=0; $i < $n; $i++) {
-        for( $j=$i; $j < $n; $j++) {
-            for( $k=$j; $k < $n; $k++) {
+    for( $i=0; $i < $n; $i++ ) {
 
-                if($arr[$i] == $arr[$j]/$r && $arr[$j] == $arr[$k]/$r) {
-                    //echo "(".$arr[$i].",".$arr[$j].",".$arr[$k].")\n";
-                    echo "(".$i.",".$j.",".$k.")\n";
+        // loop start from next element in array
+        for( $j=$i; $j < $n; $j++ ) {
+
+            // loop start from next element in array
+            for( $k=$j; $k < $n; $k++ ) {
+
+                // check if triplet is possible
+                if( $arr[$i] == $arr[$j]/$r && $arr[$j] == $arr[$k]/$r ) {
+
                     $countTriplets ++;
                 }
             }
